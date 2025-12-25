@@ -108,6 +108,12 @@ function App() {
                 </div>
               </div>
 
+              {/* Contact */}
+              <div className="flex justify-center gap-6 text-xl">
+                <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">GitHub</a>
+                <a href="https://www.linkedin.com/in/your-profile-username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 font-semibold">LinkedIn</a>
+                <a href="mailto:dhanushm0105@gmail.com" className="hover:text-red-400">Email</a>
+              </div>
             </div>
           </div>
         </div>
@@ -115,7 +121,7 @@ function App() {
         {/* Footer */}
         <footer className="bg-white py-4 border-t">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <p className="text-gray-500 text-sm">My first website, still learning and growing!</p>
+            <p className="text-gray-500 text-sm">© 2024 Dhanush M - My first website, still learning and growing!</p>
           </div>
         </footer>
       </div>
