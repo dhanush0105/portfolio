@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Dhanush M</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: 0.3s;
+      border-top: 4px solid var(--accent-color);
+    }
+    .project-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.15); transform: translateY(-4px); }
+    .project-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: #222; }
+    .project-card p { font-size: 14px; color: #666; margin-bottom: 15px; }
+    .project-card .badge { background: color-mix(in srgb, var(--accent-color), transparent 85%); color: var(--accent-color); font-weight: 500; padding: 5px 12px; border-radius: 20px; font-size: 12px; margin-right: 5px; }
+    .project-icon { font-size: 36px; color: var(--accent-color); margin-bottom: 15px; }
+  </style>
+</head>
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Dhanush M</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/resume.html">Resume</a></li>
+          <li><a href="/portfolio.html" class="active">Projects</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dhanush-m-67450b28b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/dhanush0105" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Things I have built and am planning to build on my coding journey</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-globe"></i></div>
+              <h4>Portfolio Website</h4>
+              <p>My very first website! Built using HTML, CSS and React to showcase my profile and learning journey.</p>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">React</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-calculator"></i></div>
+              <h4>Simple Calculator</h4>
+              <p>A basic calculator built while learning JavaScript. Performs addition, subtraction, multiplication and division.</p>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <h4>HTML Practice Pages</h4>
+              <p>A collection of basic HTML pages built while following tutorials and learning web development fundamentals.</p>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-check2-square"></i></div>
+              <h4>To-Do App (Planned)</h4>
+              <p>Planning to build a task manager app using JavaScript where users can add, complete and delete tasks.</p>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-phone"></i></div>
+              <h4>Mobile App (Dream)</h4>
+              <p>A dream project — building a mobile app someday once I learn React Native and mobile development basics.</p>
+              <span class="badge">React Native</span>
+              <span class="badge">Future</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-bar-chart"></i></div>
+              <h4>Data Project (Planned)</h4>
+              <p>Planning to explore Python for data analysis as part of my academic coursework at SKCET.</p>
+              <span class="badge">Python</span>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Dhanush M</strong> All Rights Reserved</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dhanush-m-67450b28b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/dhanush0105" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
