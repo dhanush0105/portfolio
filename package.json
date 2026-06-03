@@ -19,7 +19,7 @@
     "start": "serve -s public -l 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
