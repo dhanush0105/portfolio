@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/portfolio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -547,11 +548,12 @@
           </div>
         </div>
         <div class="contact-form">
-          <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary">
+          <form id="contact-form">
+            <input type="text" name="from_name" id="from_name" placeholder="Full Name" required>
+            <input type="email" name="from_email" id="from_email" placeholder="Email Address" required>
+            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+            <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
