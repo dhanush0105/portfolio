@@ -139,30 +139,92 @@ if (heroTitle) {
   setTimeout(typeWriter, 500);
 }
 
-// Form Submission (Basic validation)
-const contactForm = document.querySelector('.contact-form form');
+// Form Submission with EmailJS
+const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+  // Initialize EmailJS
+  emailjs.init('yTGUn6IcHF3hoPMbC');
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const inputs = contactForm.querySelectorAll('input, textarea');
+    // Get form fields
+    const nameInput = document.getElementById('from_name');
+    const emailInput = document.getElementById('from_email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    // Validate all fields
     let isValid = true;
-
+    const inputs = [nameInput, emailInput, subjectInput, messageInput];
+    
     inputs.forEach(input => {
       if (!input.value.trim()) {
         isValid = false;
         input.style.borderColor = '#ef4444';
       } else {
-        input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        input.style.borderColor = 'rgba(0, 0, 0, 0.15)';
       }
     });
 
-    if (isValid) {
-      alert('Thank you for your message! I will get back to you soon.');
-      contactForm.reset();
-    } else {
-      alert('Please fill in all fields.');
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() && !emailPattern.test(emailInput.value.trim())) {
+      isValid = false;
+      emailInput.style.borderColor = '#ef4444';
+      alert('Please enter a valid email address.');
+      return;
     }
+
+    if (!isValid) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    // Show loading state
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: nameInput.value.trim(),
+      from_email: emailInput.value.trim(),
+      subject: subjectInput.value.trim(),
+      message: messageInput.value.trim()
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_portfolio', 'template_qgz7nbt', templateParams)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        
+        // Show success message
+        alert('Thank you for your message. I will get back to you soon.');
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // Reset border colors
+        inputs.forEach(input => {
+          input.style.borderColor = 'rgba(0, 0, 0, 0.15)';
+        });
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        
+        // Show error message
+        alert('Message could not be sent. Please try again later.');
+        
+        // Reset button
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
   });
 }
 
