@@ -10,6 +10,7 @@
   <meta name="keywords" content="Dhanush M, Software Developer, Java, Python, AWS, Portfolio">
   <title>Dhanush M | Software Developer Portfolio</title>
   <link rel="stylesheet" href="assets/css/portfolio.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -580,5 +581,40 @@
   </button>
 
   <script src="assets/js/portfolio.js"></script>
+  <script>
+(function() {
+    emailjs.init("yTGUn6IcHF3hoPMbC");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const submitBtn = document.getElementById("submit-btn");
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    emailjs.sendForm(
+        "service_portfolio",
+        "template_qgz7nbt",
+        this
+    )
+    .then(function() {
+        alert("Message sent successfully!");
+
+        document.getElementById("contact-form").reset();
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    })
+    .catch(function(error) {
+        console.error("FAILED...", error);
+
+        alert("Failed to send message. Please try again.");
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    });
+});
+</script>
 </body>
 </html>
