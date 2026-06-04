@@ -755,6 +755,115 @@ body {
   text-align: center;
 }
 
+/* GitHub Section - Professional Growth & Technical Expertise */
+.growth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.growth-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: 0.3s;
+}
+
+.growth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.15);
+  border-color: var(--primary);
+}
+
+.growth-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--off-white);
+}
+
+.growth-header i {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.growth-header h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.growth-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tech-group h4,
+.learning-item h4,
+.objective-item h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.tech-group p,
+.learning-item p,
+.objective-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.learning-item,
+.objective-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.learning-item:last-child,
+.objective-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tech-group {
+  padding: 0.8rem;
+  background: var(--off-white);
+  border-radius: 10px;
+  border-left: 3px solid var(--primary);
+}
+
+.growth-commitment {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--off-white);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.growth-commitment p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Responsive for Growth Section */
+@media (max-width: 968px) {
+  .growth-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Contact Section */
 .contact {
   background: var(--light-bg);
